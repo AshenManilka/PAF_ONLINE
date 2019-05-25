@@ -1,0 +1,185 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!----botstrap css-->
+    <link rel="stylesheet" href="cs/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <!---main css-->
+    <link rel="stylesheet" href="cs/register.css">
+    <link rel="stylesheet" href="cs/register.css">
+</head>
+<body>
+<style>
+body{
+    font-family: 'Roboto Slab', Courier, monospace;
+   
+  } 
+</style>
+
+     <div class="container">
+       <h1><div class="py-5 text-center">Payment</div></h1>
+         
+         <div class="row">
+             
+             <div class="col-md-12">
+         
+       <div class="flex-box">
+           
+           
+           
+          <form  onsubmit="return  validation()"   action="" method="post" class="bg-light"  enctype="multipart/form-data">
+
+          <div class="row">
+             
+
+                  <!--Last Name-->
+
+                <div class="col-md-6 mb-3">
+                  <label for="CardID">CardID</label>
+                  <input type="text" class="form-control" id="CardID" name="CardID" placeholder="CardID" value="">
+                  <span id="ln" class="text-danger font-weight-bold"></span>
+          </div>
+        </div>
+
+        <div class="mb-3">
+                        <label for="">OID</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend"></div>
+                          </div>
+                          <input type="text" class="form-control" id="OID" name="OID"  value="" placeholder="OID" >
+                          <span id="un" class= "text-danger font-weight-bold"></span>
+                        </div>
+                  
+              
+                      <div class="mb-3">
+                        <label for="PAMOUNT">PAMOUNT </label>
+                        <input type="text" class="form-control" id="PAMOUNT" name="PAMOUNT" placeholder="PAMOUNT" value="" >
+                        <span id="em" class="text-danger font-weight-bold"></span>
+                      </div>
+              
+                      <div class="mb-3">
+                        <label for="Password">PDATE</label>
+                        <input type="text" class="form-control" id="PDATE" name="PDATE"  placeholder="PDATE" value="" >
+                        <span id="pswd" class="text-danger font-weight-bold"></span>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="CPassword">PID</label>
+                        <input type="text " class="form-control" id="PID" name="PID" placeholder="PID" value="" >
+                        <span id="cpswd" class="text-danger font-weight-bold" ></span>
+                      </div>
+              
+                      <div class="mb-3">
+                            <label for="address">PSTATUS</label>
+                            <input type="text" class="form-control" id="PSTATUS" name="PSTATUS" placeholder="PSTATUS"  value="" >
+                            <span id="add" class="text-danger font-weight-bold"></span>
+                         </div>
+
+                   
+                      
+                   
+         
+    
+       </div>
+
+       <div class="col-sm-4 col-lg-4 col-md-4  text-center">
+        <div class="thumbnail">
+     
+          
+
+           
+          
+
+        
+
+          <br>      
+              <button  class="btn btn-primary" type="submit" name="submit" id="submit">SUBMIT</button>
+     
+                 <a href="Profile.php " type class="btn btn-danger">Back</a>
+   
+        </div>
+        </form>
+     
+     </div>
+                 </div>
+           
+         
+        
+
+          
+     </div>  
+ 
+
+
+             
+    
+
+     <script type="text/javascript">
+     function validation(){
+                            var cardid = document.getElementById('CardID').value;
+                            var oid = document.getElementById('OID').value;
+                            var pamount = document.getElementById('PAMOUNT').value;
+                            var pdate = document.getElementById('PDATE').value;
+                            var pid = document.getElementById('PID').value;
+                            var pstatus = document.getElementById('PSTATUS').value;
+                         
+                            
+                            
+                            if( cardid == ""){
+                              document.getElementById('CardID').innerHTML = " ** please fill the CARDID";
+                              return false;
+
+                            }
+
+                            if( cardid.length!=16){
+                              document.getElementById('CardID').innerHTML = " ** should contain 16 digits";
+                              return false;
+                            }
+                            if( oid == ""){
+                              document.getElementById('OID').innerHTML = " ** please fill the OID";
+                              return false;
+                            }
+                            
+                            if( pamount == ""){
+                              document.getElementById('PAMOUNT').innerHTML = " ** Please fill the PAMOUNT";
+                              return false;
+                            }
+                                                     
+                            if( pdate == ""){
+                              document.getElementById('PDATE').innerHTML = " ** Please fill the PDATE";
+                              return false;
+                            }
+                           
+  
+                            if( pid == ""){
+                              document.getElementById('PID').innerHTML = " ** Please fill the PID";
+                              return false;
+                            }
+                           
+                            if( pstatus == ""){
+                              document.getElementById('PSTATUS').innerHTML = " ** Please fill the PSTATUS";
+                              return false;
+                            }
+                          
+                          
+                           
+     }
+                            
+
+     </script>
+
+
+
+ 
+         
+
+
+
+</body>
+</html>
